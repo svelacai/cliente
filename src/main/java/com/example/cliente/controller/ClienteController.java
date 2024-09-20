@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -21,9 +22,12 @@ import com.example.cliente.service.ClienteService;
 //@CrossOrigin(origins = "*", methods = { RequestMethod.GET, RequestMethod.POST, RequestMethod.DELETE })
 
 public class ClienteController {
-
+	
+	
 	@Autowired
 	ClienteService service;
+
+	
 
 	@GetMapping("/getClienteCedula")
 	public ResponseEntity<?> consultarCedula(@RequestBody Cliente cliente) {
