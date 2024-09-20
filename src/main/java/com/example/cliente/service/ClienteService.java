@@ -15,16 +15,28 @@ public class ClienteService {
 	ClienteRespository repository;
 
 	public Cliente consultaClientesPorcedula(Cliente cliente) {
-
 		Cliente consulta = repository.getCliente(cliente.numeroDocumento);
 		return consulta;
 
 	}
 
 	public List<Cliente> getClientes() {
-
 		List<Cliente> consulta = repository.getClientes();
 		return consulta;
+
+	}
+
+	public void crearCliente(Cliente cliente) {
+		repository.save(cliente);
+	}
+
+	public void eliminarCliente(Cliente cliente) {
+		repository.deleteById(cliente.getId());
+
+	}
+
+	public void updateCliente(Cliente cliente) {
+		repository.save(cliente);
 
 	}
 
