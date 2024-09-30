@@ -11,6 +11,8 @@ import com.example.cliente.repository.ClienteRespository;
 @Service
 public class ClienteService {
 
+	// prueba!!
+
 	@Autowired
 	ClienteRespository repository;
 
